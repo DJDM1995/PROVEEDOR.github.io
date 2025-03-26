@@ -14,16 +14,21 @@
 
             if (password === "1234") {  // Cambia "1234" por tu contraseña
                 var redirectUrl = "https://bit.ly/4hNzlBy";  // Cambia por el enlace de destino
-                var letra = "a"; // Aquí defines la letra que quieres agregar al link
-                window.location.href = redirectUrl + "?token=" + letra; // Redirige con el parámetro añadido
+                window.location.href = redirectUrl;  // Redirige al usuario a la página
             } else {
                 alert("❌ Contraseña incorrecta. Intenta de nuevo.");
             }
         }
 
-        // Evita copiar y pegar
-        document.addEventListener("copy", (event) => event.preventDefault());
-        document.addEventListener("paste", (event) => event.preventDefault());
+        // Este script debe estar en la página de destino (https://www.ejemplo.com)
+        window.onload = function() {
+            if (window.location.href === "https://bit.ly/4hNzlBy") {
+                // Aquí se agrega la letra "a" al URL después de que la página se cargue
+                var letra = "a";  // La letra que deseas agregar
+                var newUrl = window.location.href + "?token=" + letra;
+                window.history.pushState({ path: newUrl }, "", newUrl);  // Modifica el URL
+            }
+        };
     </script>
 </head>
 <body>
