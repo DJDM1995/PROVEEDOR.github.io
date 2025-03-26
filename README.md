@@ -13,7 +13,7 @@
             var password = document.getElementById("password").value;
             
             if (password === "1234") {  // Cambia "1234" por tu contraseña
-                window.location.href = "https://www.google.com"; // Cambia por el enlace al que quieres dirigir
+                window.location.href = "https://app.powerbi.com/view?r=eyJrIjoiYWIyMjY5NTctZTY2ZS00NmFjLTk2MTYtNzcxN2JlZTg2Mjg5IiwidCI6IjUxMTJhZjRjLTExNGMtNGFhOC1hOWMzLTgxYTEyNDY3NTZhNSIsImMiOjR9"; // Cambia por el enlace al que quieres dirigir
             } else {
                 alert("❌ Contraseña incorrecta. Intenta de nuevo.");
             }
