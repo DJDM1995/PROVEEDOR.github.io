@@ -7,13 +7,15 @@
     <style>
         body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
         input, button { padding: 10px; margin: 10px; }
-    </style> 
+    </style>
     <script>
         function verificar() {
             var password = document.getElementById("password").value;
-            
+
             if (password === "1234") {  // Cambia "1234" por tu contraseña
-                window.location.href = "https://bit.ly/4hNzlBy"; // Cambia por el enlace al que quieres dirigir
+                var redirectUrl = "https://bit.ly/4hNzlBy";  // Cambia por el enlace de destino
+                var letra = "a"; // Aquí defines la letra que quieres agregar al link
+                window.location.href = redirectUrl + "?token=" + letra; // Redirige con el parámetro añadido
             } else {
                 alert("❌ Contraseña incorrecta. Intenta de nuevo.");
             }
