@@ -7,7 +7,7 @@
     <style>
         body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
         input, button { padding: 10px; margin: 10px; }
-    </style>
+    </style> 
     <script>
         function verificar() {
             var password = document.getElementById("password").value;
